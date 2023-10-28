@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "room-finder": "^0.4.3"
+  }
+}

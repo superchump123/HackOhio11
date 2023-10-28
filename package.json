@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "pixi.js": "^7.3.2",
     "room-finder": "^0.4.3"
   }
 }

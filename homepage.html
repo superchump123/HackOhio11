@@ -22,7 +22,24 @@
     color: #FFFFFF;
     font-family: Verdana, sans-serif;
     text-align: center;
+    font-size:20px;
 
+}
+button {
+  transition-duration: 0.15s;
+  border-radius:12px;
+  background-color: #b6777f;
+  font-size: 20px;
+  color:#FFFFFF;
+  border: none;
+  outline: none;
+  height:80px;
+  width:150px;
+}
+
+button:hover {
+  background-color: #f0c9ce;
+  color: #FFFFFF;
 }
 </style>
 <script src=""></script>
@@ -31,10 +48,15 @@
 
 
 <div class="">
-<h1><b>Honda Challenge</b> <br>Team 192: Nintendon't</h1>
-<h2>Welcome to the Ohio Union. <br> Get step-by-step directions to any room.</h2>
-<p>I'm at...<br>(Enter dropdown for room)<br><p>
-<p>I'm need to go to...<br>(Enter dropdown for room)<p>
+<h1><span style="background-color: #b6777f; display:block;"><b>Honda Challenge</b> <br>Team 192: Nintendon't </span></h1>
+<p>At OSU, navigating the buildings can be difficult, whether you're a student, an instructor, or a guest.</p>
+<P>Many of the buildings have been renovated multiple times, resulting in confusing floor layouts, making it easy to get lost.</P>
+<p>We've developed a way for anyone to generate step-by-step written directions, along with a route map, to navigate from one room in a building to another.</p>
+<p>We accomplished this by mapping every room, hallway, staircase, and door to nodes, and finding the shortest path between nodes.</p>
+<p>These node paths are translated into step-by-step directions, along with being transcribed to a visual format by drawing lines onto a map.</p>
+<p>This makes travel less stressful, reducing the likelihood of getting lost and thus helping users to arrive to their destination in less time.</p>
+
+<a href="getdirections.html"><button>Get Directions</button></a>
 </div>
 
 </body>

@@ -27,15 +27,42 @@
 </style>
 <script src=""></script>
 <body >
-<img src="Hack11_logo.svg" alt="Hack OH/IO 11 logo" style="width:25%" class="center">
+	<img src="Hack11_logo.svg" alt="Hack OH/IO 11 logo" style="width:25%" class="center">
+	<canvas id="myCanvas" width="500" height="750"></canvas>
+	<script>
+		
+
+		function changeCanvas() {
+			
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			base_image = new Image();
+  			base_image.src = 'UnionFloor2Map.png';
+
+			base_image.onload = () => {
+  				ctx.drawImage(base_image, 0, 0, 500, 500);
+				drawLine(c, ctx, 0, 0, 100, 100);
+			}
+
+			
+		}
+
+		function drawLine(c, ctx, startx, starty, endx, endy){
+			ctx.beginPath();
+			ctx.moveTo(startx, starty);
+			ctx.lineTo(endx, endy);
+			ctx.lineWidth(10);
+			ctx.stroke();
+		}
+
+		window.onload = changeCanvas;
+	</script>		
 
 
-<div class="">
-<h1><b>Honda Challenge</b> <br>Team 192: Nintendon't</h1>
-<h2>Welcome to the Ohio Union. <br> Get step-by-step directions to any room.</h2>
-<p>I'm at...<br>(Enter dropdown for room)<br><p>
-<p>I'm need to go to...<br>(Enter dropdown for room)<p>
-</div>
+
+
+
+
 
 </body>
 </html>

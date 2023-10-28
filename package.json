@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dijkstrajs": "^1.0.3",
     "room-finder": "^0.4.3"
   }
 }

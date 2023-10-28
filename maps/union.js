@@ -1,4 +1,5 @@
 const rf = require('room-finder');
+const dk = require('dijkstrajs');
 
 const westPlazaEntrance = new rf.Room("West Plaza Entrance", rf.Direction.FRONT);
 const unionMarket = new rf.Room("Union Market and Espress-OH", rf.Direction.LEFT);
@@ -16,7 +17,7 @@ const usBank = new rf.Room("US Bank", rf.Direction.LEFT);
 const publicSafety = new rf.Room("OSU Public Safety Office", rf.Direction.RIGHT);
 
 function createBuilding() {
-    const greatHallToBookstoreFork = new rf.Fork(rf.Direction.LEFT, "Great Hall to Bookstore Hallway", "Bookstore Hallway");
+    const greatHallToBookstoreFork = new rf.Fork(rf.Direction.LEFT, rf.reverseConnection("Great Hall to Bookstore Hallway"), "Bookstore Hallway");
     const mainHallway = new rf.Hallway([
         westPlazaEntrance,
         sloopysDiner,
@@ -43,7 +44,7 @@ function printDirections(start, end) {
     console.log(
         floor1.getDirections(start, end)
     );
-    console.log(floor1.graph);
+    dk.find_path(floor1.graph, start, end);
 }
 
 module.exports = { printDirections };

@@ -1,3 +1,3 @@
 const test = require('./maps/union')
 
-test.printDirections("Sloopy's Diner", "University Bookstore");
+test.printDirections("BasicRoomNode-$-Sloopy's Diner", "BasicRoomNode-$-US Bank Conference Center");

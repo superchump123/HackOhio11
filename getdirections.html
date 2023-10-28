@@ -24,14 +24,33 @@
     text-align: center;
 
 }
+button {
+  transition-duration: 0.15s;
+  border-radius:12px;
+  background-color: #b6777f;
+  font-size: 20px;
+  color:#FFFFFF;
+  border: none;
+  outline: none;
+  height:80px;
+  width:150px;
+}
+
+button:hover {
+  background-color: #f0c9ce;
+  color: #FFFFFF;
+}
+</style>
 </style>
 <script src=""></script>
 <body >
 <div class="">
-<h1><b>Honda Challenge</b> <br>Team 192: Nintendon't</h1>
+<h1><span style="background-color: #b6777f; display:block;"><b>Honda Challenge</b> <br>Team 192: Nintendon't</span></h1>
 <h2>Welcome to the Ohio Union. <br> Get step-by-step directions to any room.</h2>
+<p>Note: This prototype only supports directions for rooms on the second floor of the Union.</p>
 <p>I'm at...<br>(Enter dropdown for room)<br><p>
 <p>I'm need to go to...<br>(Enter dropdown for room)<p>
+<button>Generate Directions</button>
 </div>
 
 </body>

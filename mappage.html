@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Team Nintendon't Hack OH/IO 11</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+    img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+    body{
+    background-color: #e0b3b8;
+    color: #FFFFFF;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+
+}
+</style>
+<script src=""></script>
+<body >
+	<img src="Hack11_logo.svg" alt="Hack OH/IO 11 logo" style="width:25%" class="center">
+	<canvas id="myCanvas" width="500" height="750"></canvas>
+	<script>
+		
+
+		function changeCanvas() {
+			
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			base_image = new Image();
+  			base_image.src = 'UnionFloor2Map.png';
+
+			base_image.onload = () => {
+  				ctx.drawImage(base_image, 0, 0, 500, 500);
+				drawLine(c, ctx, 0, 0, 100, 100);
+			}
+
+			
+		}
+
+		function drawLine(c, ctx, startx, starty, endx, endy){
+			ctx.beginPath();
+			ctx.moveTo(startx, starty);
+			ctx.lineTo(endx, endy);
+			ctx.lineWidth(10);
+			ctx.stroke();
+		}
+
+		window.onload = changeCanvas;
+	</script>		
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 const rf = require('room-finder');
 
 const westPlazaEntrance = new rf.Room("West Plaza Entrance", rf.Direction.FRONT);
-const unionMarket = new rf.Room("Union Market", rf.Direction.LEFT);
+const unionMarket = new rf.Room("Union Market and Espress-OH", rf.Direction.LEFT);
 const sloopysDiner = new rf.Room("Sloopy's Diner", rf.Direction.RIGHT);
 const woodysTavern = new rf.Room("Woody's Tavern", rf.Direction.LEFT);
 const bankConference = new rf.Room("US Bank Conference Theater", rf.Direction.RIGHT);
@@ -43,6 +43,7 @@ function printDirections(start, end) {
     console.log(
         floor1.getDirections(start, end)
     );
+    console.log(floor1.graph);
 }
 
 module.exports = { printDirections };

@@ -44,7 +44,6 @@ function printDirections(start, end) {
     console.log(
         floor1.getDirections(start, end)
     );
-    dk.find_path(floor1.graph, start, end);
 }
 
 module.exports = { printDirections };
